@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import SingleProductPage from "./pages/SingleProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
@@ -13,6 +13,7 @@ function App() {
     <Provider store={store}>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="/products" />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<SingleProductPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
