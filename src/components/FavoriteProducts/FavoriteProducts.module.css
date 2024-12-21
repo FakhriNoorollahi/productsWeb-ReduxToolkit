@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 4em);
+  padding: 2em 0;
 }
 
 .favoriteBox {
@@ -131,6 +132,9 @@
 }
 
 @media screen and (max-width: 490px) {
+  .container {
+    padding-bottom: 7em;
+  }
   .favoriteBox {
     margin-right: 3em;
     margin-left: 3em;
